@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.android.sopo.remember.AddActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nombre:"
+        android:id="@+id/tvNombre"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etNombre"
+        android:layout_alignTop="@+id/tvNombre"
+        android:layout_toRightOf="@+id/tvNombre"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spTipos"
+        android:spinnerMode="dialog"
+        android:layout_below="@+id/etNombre"
+        android:layout_alignLeft="@+id/etNombre"
+        android:layout_alignStart="@+id/etNombre" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tipos:"
+        android:id="@+id/tvTipo"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/etNombre"
+        android:layout_alignLeft="@+id/tvNombre"
+        android:layout_alignStart="@+id/tvNombre" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Dia: "
+        android:id="@+id/tvDia"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/spTipos"
+        android:layout_alignLeft="@+id/tvTipo"
+        android:layout_alignStart="@+id/tvTipo" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spDia"
+        android:spinnerMode="dialog"
+        android:layout_below="@+id/spTipos"
+        android:layout_alignLeft="@+id/spTipos"
+        android:layout_alignStart="@+id/spTipos" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpiar"
+        android:id="@+id/bLimpiar"
+        android:onClick="clickLimpiar"
+        android:layout_alignTop="@+id/bAddBD"
+        android:layout_alignRight="@+id/etNombre"
+        android:layout_alignEnd="@+id/etNombre" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar"
+        android:id="@+id/bAddBD"
+        android:layout_marginBottom="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/bLimpiar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Hora:"
+        android:id="@+id/tvHora"
+        android:layout_marginTop="31dp"
+        android:layout_alignTop="@+id/tpHora"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tpHora"
+        android:layout_below="@+id/spDia"
+        android:layout_toRightOf="@+id/tvTipo" />
+</RelativeLayout>
